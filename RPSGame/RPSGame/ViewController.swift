@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var comChoiceLabel: UILabel!
     @IBOutlet weak var myChoiceLabel: UILabel!
     
+    //데이터 저장을 위한 변수 (컴퓨터, 나의 선택)
     var comChoice: Rps = Rps(rawValue: Int.random(in: 0...2))!
-    var myChoice: Rps = Rps.rock
+    var myChoice: Rps = Rps(rawValue: Int.random(in: 0...2))!
    
     
     // 함수, 메서드
@@ -42,9 +43,8 @@ class ViewController: UIViewController {
         // 가위,바위,보를 선택해서 그 정보를 저장해야 함. -> enum Rps로 만들어둠
         
 // // currentTitle이 옵셔널타입이라 바인딩 해주어야하지만 여기선 nil값이 없는 상태라 안함
-//        guard let title = sender.currentTitle else {
-//            return
-//        }
+//        guard let title = sender.currentTitle else { return }
+//      print(title)
         
         //버튼의 문자열을 가져옴
         let title = sender.currentTitle
